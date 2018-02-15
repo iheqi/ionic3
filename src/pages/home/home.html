@@ -1,14 +1,39 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
+  <ion-navbar color="danger">
+    <ion-title text-center>
+      每日一拍
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="playSlideshow()">
+        <ion-icon name="play"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
+<ion-content>
+    <button *ngIf="!photoTaken" (click)="takePhoto()" class="btn">
+      <h1>笑一个!</h1>
+      <h3>你今天还没有拍照哦!</h3>
+      <button ion-button full clear color="light" large>
+        <ion-icon name="md-camera"></ion-icon>
+      </button>
+     <!--  <img src="assets/imgs/smile.png"/> -->
+    </button>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <button *ngIf="photoTaken" class="btn">
+        <h3>你今天已经拍了照哦!</h3>
+        <h3>迎接更好的明天吧!</h3> 
+    </button>
+<!--     <ion-item-sliding *ngFor="let photo of photos">
+      <ion-item>
+        <img [src]="photo.image"/>
+        <ion-badge item-right light>{{photo.date | date:"d天前"}}</ion-badge>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button light (click)="removePhoto(photo)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding> -->
+    
 </ion-content>

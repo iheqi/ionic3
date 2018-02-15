@@ -1,3 +1,31 @@
 page-home {
+    .btn {
+        /* height: 100vw; */
+        width: 100%;
+        background-color: #e7e7e7;
+    }
+    .btn h1 {
+        font-size: 4rem;
+        font-weight: 1000;
+        color: #e92e0d
+    }
 
+    .btn h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #060706
+    }
+
+    .btn h1, #btn h3 {
+        text-align: center
+    }
+
+    .btn button {
+        color: black;
+    }
+
+    ion-content {
+        background-image:url('../../assets/imgs/1.jpg');
+        background-size: cover; 
+    }
 }
